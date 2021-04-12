@@ -16,12 +16,12 @@ latex:
     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
+# bibtex_bibfiles:
+#   - references.bib
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
+  url: https://nathanael-fijalkow.github.com/reinforcement_learning  # Online location of your book
   path_to_book: /  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
@@ -30,3 +30,32 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - dollarmath
+    - linkify
+    - substitution
+
+sphinx:
+  config:
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+sphinx:
+  config:
+    mathjax_config:
+      TeX:
+        Macros:
+          "R": "\\mathbb{R}"
+          "Q": "\\mathbb{Q}"
+          "N": "\\mathbb{N}"
+          "Z": "\\mathbb{Z}"
+          "M": "\\mathcal{M}"
+          "A": "\\mathcal{A}"
+          "B": "\\mathcal{B}"
+          "E": "\\mathbb{E}"
+          "P": "\\mathbb{P}"
+          "val": "\\text{val}"
+          "Dist": "\\mathcal{D}"

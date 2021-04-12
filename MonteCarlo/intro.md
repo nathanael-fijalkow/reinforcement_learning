@@ -1,35 +1,6 @@
----
-layout:     post
-title:      Part 3, Monte Carlo approaches, temporal differences, and off-policy learning
-date:       2019-11-28 9:00:00
-author:     Nathana&euml;l Fijalkow
-category:   Reinforcement learning
----
+# Model
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: {
-    Macros: {
-      R: "{\\mathbb{R}}",
-      Q: "{\\mathbb{Q}}",
-      N: "{\\mathbb{N}}",
-      Z: "{\\mathbb{Z}}",
-      M: "{\\mathcal{M}}",
-      A: "{\\mathcal{A}}",
-      B: "{\\mathcal{B}}",
-      E: "{\\mathbb{E}}",
-      P: "{\\mathbb{P}}",
-      val: "{\\text{val}}",
-      Dist: "{\\mathcal{D}}",
-    }
-  }
-});
-</script>
-
-<p class="intro"><span class="dropcap">W</span>e consider the setting where the MDP is only known through simulation and show how to adapt the previous algorithms using statistics instead of exact computations.</p>
-
-The basic notations are given in the [course outline]({{ '/blog/MDP' | prepend: site.baseurl }}).
-The first part about dynamic algorithms is [here]({{ '/blog/dynamic_algorithms_MDP' | prepend: site.baseurl }}).
+We consider the setting where the MDP is only known through simulation and show how to adapt the previous algorithms using statistics instead of exact computations.
 
 We now lift the two (unrealistic) assumptions made by dynamic algorithms:
 * the MDP has a finite set of states and actions, which can be both tabularised
@@ -60,7 +31,7 @@ The Monte Carlo approach makes one key assumption:
 This is reasonable for most games, where a winner is eventually determined, in finite time.
 This assumption also means that whenever a terminal state is reached we can start over from the initial state again to produce a new episode.
 
-##### The evaluation task
+## The evaluation task
 
 Recall that the dynamic solution for the evaluation task was based on the following equations for a strategy $$\sigma:$$
 
@@ -81,7 +52,7 @@ Using the equation above $$\widehat{\val}_\sigma(s)$$ induces $$\widehat{q}_\sig
 Note that the only design choice so far in the naive Monte Carlo approach was whether we consider each visit or only the first in a play.
 Both would lead to converging algorithms, as long as we evaluate randomised positional strategies.
 
-##### The improvement task
+## The improvement task
 
 Recall that given a strategy $$\sigma$$ and its value function $$\val_\sigma$$, 
 we define 
@@ -109,19 +80,10 @@ $$
 The fact that the strategy plays each action with positive probability implies that when evaluating $$\sigma'$$ we collect information about each action for every visited state.
 Note that some states may never be visited, that's fine.
 
-##### The complete algorithm
+## The complete algorithm
 
 The Monte Carlo policy iteration algorithm is: 
 starting from any strategy, apply alternatively evaluation and improvement to construct better and better strategies.
 The theoretical guarantees are slim, since unless we evaluate strategies for infinitely many times, $$\widehat{\val}_\sigma$$ may not be equal (or even close!) to $$\val_\sigma.$$
 But in practice, it works.
-
-## The temporal difference approach
-
-Coming soon!
-
-## Learning off-police and importance sampling
-
-Coming soon (but less soon than above...)!
-
 

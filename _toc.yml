@@ -1,8 +1,65 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
-#
+
 - file: intro
-- file: content
-  sections:
-    - file: markdown
-    - file: notebooks
+
+- part: Multi-armed bandits
+  chapters:
+  - file: MAB/index
+    sections:
+      - file: MAB/intro
+      # - file: MAB/UCB
+      - file: MAB/proof_UCB
+      # - file: MAB/Thompson
+      # - file: MAB/Experiments
+      # - file: MAB/references
+
+- part: Markov decision processes and dynamic algorithms
+  chapters:
+  - file: MDP/index
+    sections:
+      - file: MDP/intro
+      # - file: MDP/values
+      # - file: MDP/objectives
+      # - file: MDP/references    
+  - file: DynamicAlgorithms/index
+    sections:
+      - file: DynamicAlgorithms/intro
+      - file: DynamicAlgorithms/finite_horizon
+      - file: DynamicAlgorithms/discounted
+      - file: DynamicAlgorithms/Bellman_equations
+      - file: DynamicAlgorithms/value_iteration
+      - file: DynamicAlgorithms/policy_iteration
+      - file: DynamicAlgorithms/generalised_policy_iteration
+  #     - file: DynamicAlgorithms/references
+
+- part: Monte Carlo approaches, temporal differences, and off-policy learning
+  chapters:
+  - file: MonteCarlo/index
+    sections:
+      - file: MonteCarlo/intro
+  #     - file: MonteCarlo/values
+  #     - file: MonteCarlo/objectives
+  #     - file: MonteCarlo/references    
+  # - file: OffPolicy/index
+  #   sections:
+  #     - file: OffPolicy/intro
+  #     - file: OffPolicy/Qlearning
+  #     - file: OffPolicy/variants
+  #     - file: OffPolicy/experiments
+  #     - file: OffPolicy/references
+
+- part: Two-player games
+  chapters:
+  - file: TwoPlayer/index
+    sections:
+      - file: TwoPlayer/intro
+      - file: TwoPlayer/classic
+      - file: TwoPlayer/MCTS
+      # - file: TwoPlayer/experiments
+      # - file: TwoPlayer/references
+
+# - part: Multi-agent
+
+# - part: Partially observable Markov decision processes
+
