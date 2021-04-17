@@ -8,11 +8,14 @@
   - file: MAB/index
     sections:
       - file: MAB/intro
-      # - file: MAB/UCB
+      - file: MAB/regret
+      - file: MAB/exploration
+      - file: MAB/experiments_exploration
+      - file: MAB/UCB
       - file: MAB/proof_UCB
-      # - file: MAB/Thompson
-      # - file: MAB/Experiments
-      # - file: MAB/references
+      - file: MAB/Thompson
+      - file: MAB/full_comparison
+      - file: MAB/references
 
 - part: Markov decision processes and dynamic algorithms
   chapters:
