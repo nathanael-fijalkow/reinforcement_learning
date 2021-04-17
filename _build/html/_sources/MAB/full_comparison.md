@@ -1,1 +1,0 @@
-# (P) Comparison of all algorithms

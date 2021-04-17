@@ -1,1 +1,0 @@
-# (G) The Bayesian approach: Thompson's sampling algorithm 
