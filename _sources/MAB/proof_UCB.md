@@ -1,4 +1,4 @@
-# Proof of the UCB algorithm
+# (T) Regret analysis of the UCB algorithm
 
 We present a proof that the upper confidence bound yields an (asymptotically) optimal algorithm for regret minimisation of multi-armed bandits.
 

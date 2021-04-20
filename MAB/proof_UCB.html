@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proof of the UCB algorithm &#8212; Reinforcement learning</title>
+    <title>(T) Regret analysis of the UCB algorithm &#8212; Reinforcement learning</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Markov decision processes" href="../MDP/index.html" />
-    <link rel="prev" title="The model" href="intro.html" />
+    <link rel="next" title="(G) The Bayesian approach: Thompson’s sampling algorithm" href="Thompson.html" />
+    <link rel="prev" title="(G) The Upper Confidence Bound algorithm (UCB)" href="UCB.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -89,7 +89,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
+  <a class="reference internal" href="../index.html">
    Welcome
   </a>
  </li>
@@ -107,12 +107,47 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="intro.html">
-     The model
+     (G) The model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="regret.html">
+     (G) Regret
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exploration.html">
+     (G) The trade-off exploration / exploitation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="experiments_exploration.html">
+     (P) Experiments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="UCB.html">
+     (G) The Upper Confidence Bound algorithm (UCB)
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Proof of the UCB algorithm
+     (T) Regret analysis of the UCB algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Thompson.html">
+     (G) The Bayesian approach: Thompson’s sampling algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="full_comparison.html">
+     (P) Comparison of all algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="references.html">
+     (G) Bibliographic references
     </a>
    </li>
   </ul>
@@ -352,8 +387,8 @@
         
               <div>
                 
-  <div class="section" id="proof-of-the-ucb-algorithm">
-<h1>Proof of the UCB algorithm<a class="headerlink" href="#proof-of-the-ucb-algorithm" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="t-regret-analysis-of-the-ucb-algorithm">
+<h1>(T) Regret analysis of the UCB algorithm<a class="headerlink" href="#t-regret-analysis-of-the-ucb-algorithm" title="Permalink to this headline">¶</a></h1>
 <p>We present a proof that the upper confidence bound yields an (asymptotically) optimal algorithm for regret minimisation of multi-armed bandits.</p>
 <p>There is an accompanying github repository for experimenting with different algorithms for the <a class="reference external" href="https://github.com/nathanael-fijalkow/Multi-Armed-Bandits">multi-armed bandits</a>.</p>
 <p>This result was proved by Auer, Cesa-Bianchi, and Fischer in <a class="reference external" href="http://homes.di.unimi.it/cesa-bianchi/Pubblicazioni/ml-02.pdf">this paper</a>.
@@ -488,8 +523,8 @@ n(i,T) \le \ell + \sum_{t \ge 1} 2 t^{-2} \le \frac{4 \log(T)}{\Delta_i^2} + \fr
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">The model</a>
-    <a class='right-next' id="next-link" href="../MDP/index.html" title="next page">Markov decision processes</a>
+    <a class='left-prev' id="prev-link" href="UCB.html" title="previous page">(G) The Upper Confidence Bound algorithm (UCB)</a>
+    <a class='right-next' id="next-link" href="Thompson.html" title="next page">(G) The Bayesian approach: Thompson’s sampling algorithm</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

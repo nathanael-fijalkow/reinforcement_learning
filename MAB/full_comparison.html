@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Model &#8212; Reinforcement learning</title>
+    <title>(P) Comparison of all algorithms &#8212; Reinforcement learning</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Dynamic algorithms" href="../DynamicAlgorithms/index.html" />
-    <link rel="prev" title="Markov decision processes" href="index.html" />
+    <link rel="next" title="(G) Bibliographic references" href="references.html" />
+    <link rel="prev" title="(G) The Bayesian approach: Thompson’s sampling algorithm" href="Thompson.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -99,54 +99,54 @@
   Multi-armed bandits
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../MAB/index.html">
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="index.html">
    Multi-armed bandits
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../MAB/intro.html">
+    <a class="reference internal" href="intro.html">
      (G) The model
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../MAB/regret.html">
+    <a class="reference internal" href="regret.html">
      (G) Regret
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../MAB/exploration.html">
+    <a class="reference internal" href="exploration.html">
      (G) The trade-off exploration / exploitation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../MAB/experiments_exploration.html">
+    <a class="reference internal" href="experiments_exploration.html">
      (P) Experiments
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../MAB/UCB.html">
+    <a class="reference internal" href="UCB.html">
      (G) The Upper Confidence Bound algorithm (UCB)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../MAB/proof_UCB.html">
+    <a class="reference internal" href="proof_UCB.html">
      (T) Regret analysis of the UCB algorithm
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../MAB/Thompson.html">
+    <a class="reference internal" href="Thompson.html">
      (G) The Bayesian approach: Thompson’s sampling algorithm
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../MAB/full_comparison.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      (P) Comparison of all algorithms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../MAB/references.html">
+    <a class="reference internal" href="references.html">
      (G) Bibliographic references
     </a>
    </li>
@@ -160,14 +160,14 @@
   Markov decision processes and dynamic algorithms
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="index.html">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../MDP/index.html">
    Markov decision processes
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../MDP/intro.html">
      Model
     </a>
    </li>
@@ -311,7 +311,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/MDP/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/MAB/full_comparison.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -331,7 +331,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://nathanael-fijalkow.github.com/reinforcement_learning/issues/new?title=Issue%20on%20page%20%2FMDP/intro.html&body=Your%20issue%20content%20here."><button
+            href="https://nathanael-fijalkow.github.com/reinforcement_learning/issues/new?title=Issue%20on%20page%20%2FMAB/full_comparison.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -359,55 +359,8 @@
         
               <div>
                 
-  <div class="section" id="model">
-<h1>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h1>
-<p>We present the model of MDPS, some fundamental properties and the two dynamic algorithms, value iteration and policy iteration.</p>
-<p>A Markov decision process is given by a set of states <span class="math notranslate nohighlight">\(S\)</span>, a set of actions <span class="math notranslate nohighlight">\(A\)</span>, and a transition function</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta : S \times A \to \Dist(S \times \R)
-\]</div>
-<p>In words: from the state <span class="math notranslate nohighlight">\(s\)</span> and playing action <span class="math notranslate nohighlight">\(a\)</span>, the outcome is drawn according to the distribution <span class="math notranslate nohighlight">\(\Delta(s,a)\)</span>, it yields a reward <span class="math notranslate nohighlight">\(r\)</span> and leads to state <span class="math notranslate nohighlight">\(s'\)</span> with probability <span class="math notranslate nohighlight">\(\Delta(s,a)(s',r)\)</span>.
-Sometimes, the next-state and reward distributions are given independently, and actually in many cases the reward is deterministic and not stochastic.</p>
-<p>We also specify an initial state <span class="math notranslate nohighlight">\(s_0\)</span>.</p>
-<p>The objective of Markov decision processes is to model decision-making for a controller in a stochastic environment with immediate rewards.
-Indeed, at every step a reward is observed (although in many scenarios we will consider the reward will be <span class="math notranslate nohighlight">\(0\)</span> at each step except for the terminal step).</p>
-<p>The distinctive properties of Markov decision processes is the <strong>Markov property</strong>: the distribution for the next state and the reward depend only on the <strong>current</strong> state and action, and not on the whole history. One commonly say “given the present, the future does not depend on the past”, although I’m not sure this formulation helps.</p>
-<p>A <strong>play</strong>, or <strong>history</strong>, is a sequence $<span class="math notranslate nohighlight">\((s_0,a_0,r_0,s_1,a_1,r_1,\dots)\)</span><span class="math notranslate nohighlight">\(, where \)</span>s_0<span class="math notranslate nohighlight">\( is the first state, \)</span>a_0<span class="math notranslate nohighlight">\( the first action, \)</span>r_0$ the first reward, and so on.</p>
-<p>The decisions are represented by <strong>strategies</strong> (also called <strong>policies</strong>). There are five types:</p>
-<ul class="simple">
-<li><p>(general) strategies are functions <span class="math notranslate nohighlight">\(\sigma : (S \times A \times \R)^* \times S \to \Dist(A)\)</span>: given a history and the current state, the strategy chooses a distribution on actions</p></li>
-<li><p><strong>pure</strong> strategies (also called <strong>deterministic</strong>) choose not a distribution on actions but a single action: <span class="math notranslate nohighlight">\(\sigma : (S \times A \times \R)^* \times S \to A\)</span></p></li>
-<li><p><strong>Markovian</strong> strategies depend only on the current state and the time step: <span class="math notranslate nohighlight">\(\sigma : \N \times S \to \Dist(A)\)</span></p></li>
-<li><p><strong>stationary</strong> strategies (also called <strong>positional</strong> or <strong>memoryless</strong>) depend only on the current state: <span class="math notranslate nohighlight">\(\sigma : S \to \Dist(A)\)</span></p></li>
-<li><p><strong>pure stationary</strong> strategies: <span class="math notranslate nohighlight">\(\sigma : S \to A\)</span>.</p></li>
-</ul>
-<p>It turns out that in most cases the simplest strategies will be enough for our purposes (we will prove this in due course).</p>
-<p>An MDP <span class="math notranslate nohighlight">\(\M\)</span> together with a strategy <span class="math notranslate nohighlight">\(\sigma\)</span> induce a Markov chain, and in particular a probability measure <span class="math notranslate nohighlight">\(\P_\sigma\)</span>, or <span class="math notranslate nohighlight">\(\P_{\sigma,s_0}\)</span> when specifying the initial state <span class="math notranslate nohighlight">\(s_0\)</span>.
-(We will not go into the formal definitions of the Markov chain and the measure here.)
-We let <span class="math notranslate nohighlight">\(S_i\)</span> denote the random variable denoting the state, <span class="math notranslate nohighlight">\(A_i\)</span> the action played, and <span class="math notranslate nohighlight">\(R_i\)</span> the reward obtained at the <span class="math notranslate nohighlight">\(i\)</span>-th step.</p>
-<p>Given a strategy <span class="math notranslate nohighlight">\(\sigma\)</span> we write <span class="math notranslate nohighlight">\(\val_\sigma\)</span> for the value function defined by</p>
-<div class="math notranslate nohighlight">
-\[
-\val_\sigma(s) = \E_{\sigma,s} [\sum_i R_i],
-\]</div>
-<p>meaning the total expected reward obtained while playing <span class="math notranslate nohighlight">\(\sigma\)</span> and starting from <span class="math notranslate nohighlight">\(s\)</span>.
-The sum is a priori infinite, hence may not exist in general.
-There are two different solutions to that:</p>
-<ul class="simple">
-<li><p>we fix some horizon and only look at paths of length the fixed horizon,</p></li>
-<li><p>we introduce a discount factor <span class="math notranslate nohighlight">\(\gamma \in (0,1)\)</span> we consider the total expected discounted reward:</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[
-\E_\sigma [\sum_i \gamma^i R_i]
-\]</div>
-<p>Since <span class="math notranslate nohighlight">\(\gamma\)</span> is less than <span class="math notranslate nohighlight">\(1\)</span>, the rewards collected at the beginning are more important than the rewards in a more distant future.</p>
-<p>The (algorithmic) goal in <strong>reinforcement learning</strong> is to find a strategy maximising the total expected reward:</p>
-<div class="math notranslate nohighlight">
-\[
-\val_*(s_0) = \sup_{\sigma \text{ strategy}} \val_\sigma(s_0)
-\]</div>
+  <div class="section" id="p-comparison-of-all-algorithms">
+<h1>(P) Comparison of all algorithms<a class="headerlink" href="#p-comparison-of-all-algorithms" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -423,7 +376,7 @@ There are two different solutions to that:</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./MDP"
+            path: "./MAB"
         },
         predefinedOutput: true
     }
@@ -438,8 +391,8 @@ There are two different solutions to that:</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Markov decision processes</a>
-    <a class='right-next' id="next-link" href="../DynamicAlgorithms/index.html" title="next page">Dynamic algorithms</a>
+    <a class='left-prev' id="prev-link" href="Thompson.html" title="previous page">(G) The Bayesian approach: Thompson’s sampling algorithm</a>
+    <a class='right-next' id="next-link" href="references.html" title="next page">(G) Bibliographic references</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

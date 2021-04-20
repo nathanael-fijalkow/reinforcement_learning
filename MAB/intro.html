@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The model &#8212; Reinforcement learning</title>
+    <title>(G) The model &#8212; Reinforcement learning</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,7 +56,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Proof of the UCB algorithm" href="proof_UCB.html" />
+    <link rel="next" title="(G) Regret" href="regret.html" />
     <link rel="prev" title="Multi-armed bandits" href="index.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -89,7 +89,7 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
+  <a class="reference internal" href="../index.html">
    Welcome
   </a>
  </li>
@@ -107,12 +107,47 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     The model
+     (G) The model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="regret.html">
+     (G) Regret
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exploration.html">
+     (G) The trade-off exploration / exploitation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="experiments_exploration.html">
+     (P) Experiments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="UCB.html">
+     (G) The Upper Confidence Bound algorithm (UCB)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="proof_UCB.html">
-     Proof of the UCB algorithm
+     (T) Regret analysis of the UCB algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Thompson.html">
+     (G) The Bayesian approach: Thompson’s sampling algorithm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="full_comparison.html">
+     (P) Comparison of all algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="references.html">
+     (G) Bibliographic references
     </a>
    </li>
   </ul>
@@ -324,8 +359,8 @@
         
               <div>
                 
-  <div class="section" id="the-model">
-<h1>The model<a class="headerlink" href="#the-model" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="g-the-model">
+<h1>(G) The model<a class="headerlink" href="#g-the-model" title="Permalink to this headline">¶</a></h1>
 <p>The setting is the following: there are <span class="math notranslate nohighlight">\(K\)</span> machines, which are each given by a distribution on rewards in <span class="math notranslate nohighlight">\([0,1]\)</span>.
 Initially, we do not know anything except for the number <span class="math notranslate nohighlight">\(K\)</span> of machines.
 At each time step, we can choose a machine <span class="math notranslate nohighlight">\(i\)</span> and get a reward from <span class="math notranslate nohighlight">\(i\)</span> drawn from the distribution attached to this machine.
@@ -351,15 +386,6 @@ The goal is to maximise</p>
 \[
 \E [ \sum_{t \in [1,T]} X(t) ]
 \]</div>
-<p>Equivalently, we can define the regret of an algorithm
-as the difference between the optimal reward in <span class="math notranslate nohighlight">\(T\)</span> steps (which is simply <span class="math notranslate nohighlight">\(\mu_* \cdot T\)</span>) and the obtained reward:</p>
-<div class="math notranslate nohighlight">
-\[
-R = \mu_* \cdot T - \sum_{t \in [1,T]} X(t)
-\]</div>
-<p>Maximising the expected total payoff is the same as minimising the regret.
-Note that both are functions of <span class="math notranslate nohighlight">\(T\)</span> the total number of steps, hence it is not clear what it means to minimise or maximise.
-We may consider the asymptotic behaviour, but of course it is more desirable to also give bounds for any <span class="math notranslate nohighlight">\(T\)</span>.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -391,7 +417,7 @@ We may consider the asymptotic behaviour, but of course it is more desirable to 
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="index.html" title="previous page">Multi-armed bandits</a>
-    <a class='right-next' id="next-link" href="proof_UCB.html" title="next page">Proof of the UCB algorithm</a>
+    <a class='right-next' id="next-link" href="regret.html" title="next page">(G) Regret</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
