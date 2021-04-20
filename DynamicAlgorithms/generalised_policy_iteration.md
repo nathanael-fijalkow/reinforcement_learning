@@ -1,4 +1,4 @@
-# The generalised policy iteration algorithm
+# Generalised policy iteration algorithm
 
 The generalised policy iteration algorithm simply alternates between evaluation and improvements steps, possibly not performing perfect evaluations.
 

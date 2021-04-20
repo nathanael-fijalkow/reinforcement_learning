@@ -1,4 +1,4 @@
-# Model
+# (G) Model: Markov decision processes
 
 We present the model of MDPS, some fundamental properties and the two dynamic algorithms, value iteration and policy iteration.
 

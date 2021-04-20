@@ -1,1 +1,1 @@
-# (G) The trade-off exploration / exploitation
+# (G) Trade-off exploration / exploitation

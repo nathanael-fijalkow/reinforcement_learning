@@ -1,4 +1,4 @@
-# (G) The model
+# (G) Model: Multi-armed bandits
 
 The setting is the following: there are $K$ machines, which are each given by a distribution on rewards in $[0,1]$.
 Initially, we do not know anything except for the number $K$ of machines.

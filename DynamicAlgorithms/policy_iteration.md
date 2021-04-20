@@ -1,4 +1,4 @@
-# The policy iteration algorithm
+# Policy iteration algorithm
 
 This second algorithm manipulates only pure positional strategies. We define two tasks:
 * **evaluation**: given a strategy $$\sigma$$, compute (or approximate) $$\val_\sigma$$

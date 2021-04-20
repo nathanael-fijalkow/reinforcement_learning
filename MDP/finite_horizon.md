@@ -1,4 +1,4 @@
-# The finite horizon case
+# (G) Finite horizon case
 
 We consider plays of length (exactly) $T$ a fixed finite value.
 
@@ -21,7 +21,6 @@ $$
 $$
 
 The key argument uses convexity.
-(A very similar proof will be given below in more details in the discounted case.)
 
 The lemma in particular implies that there are optimal deterministic Markovian strategies. 
 The dependence on the time step is necessary: closer to the time step $T$, it makes sense to play moves with higher immediate rewards but dire consequences,

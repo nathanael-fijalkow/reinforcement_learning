@@ -1,0 +1,3 @@
+# (G) Bibliographic references
+
+References

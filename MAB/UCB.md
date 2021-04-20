@@ -1,1 +1,1 @@
-# (G) The Upper Confidence Bound algorithm (UCB)
+# (G) Upper Confidence Bound algorithm (UCB)

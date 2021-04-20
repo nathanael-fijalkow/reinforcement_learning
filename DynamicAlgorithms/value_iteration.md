@@ -1,4 +1,4 @@
-# The value iteration algorithm
+# Value iteration algorithm
 
 We consider functions $$v : S \to \R$$ as vectors $$v \in \R^S$$, and write $$|v|$$ for the infinity norm of $$v$$.
 We extend the notation for the $q$-values to $v$, so

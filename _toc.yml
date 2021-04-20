@@ -22,19 +22,19 @@
   - file: MDP/index
     sections:
       - file: MDP/intro
-      # - file: MDP/values
-      # - file: MDP/objectives
-      # - file: MDP/references    
+      - file: MDP/finite_horizon
+      - file: MDP/discounted
+      - file: MDP/Bellman_equations
+      - file: MDP/values
+      - file: MDP/Bellman_equations_revisited
+      - file: MDP/references    
   - file: DynamicAlgorithms/index
     sections:
       - file: DynamicAlgorithms/intro
-      - file: DynamicAlgorithms/finite_horizon
-      - file: DynamicAlgorithms/discounted
-      - file: DynamicAlgorithms/Bellman_equations
       - file: DynamicAlgorithms/value_iteration
       - file: DynamicAlgorithms/policy_iteration
       - file: DynamicAlgorithms/generalised_policy_iteration
-  #     - file: DynamicAlgorithms/references
+      - file: DynamicAlgorithms/references
 
 - part: Monte Carlo approaches, temporal differences, and off-policy learning
   chapters:
