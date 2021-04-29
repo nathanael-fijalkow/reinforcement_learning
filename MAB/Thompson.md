@@ -25,7 +25,7 @@ def thompson_sampling(K: int, T: int, priors: List):
 
         # Choose machine with best sampled reward
         a_t = argmax(theta)
-        # Play machine a_t and observe r_t := X(i, t)
+        # Play machine a_t and observe r_t := X(a_t, t)
         r_t = play(a_t)
         
         # Replace distributions with posteriors
